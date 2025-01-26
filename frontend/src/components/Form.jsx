@@ -38,7 +38,8 @@ const Form = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/submit", {
+        const response = await fetch("https://nunta-backend.onrender.com/api/confirmare", {
+
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
