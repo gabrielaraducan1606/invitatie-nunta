@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styles from "./Countdown.module.css"
 
 function Countdown() {
     const calculateTimeLeft = () => {
@@ -28,9 +29,9 @@ function Countdown() {
     }, []);
 
     return (
-        <div style={{ textAlign: "center" }}>
-            <h2>Începe în:</h2>
-            <p>
+        <div className={styles.countdownContainer }>
+            <h2 classNAme={styles.timerTitle}>Începe în:</h2>
+            <p classNAme={styles.timerDisplay}>
                 {timeLeft.zile} zile, {timeLeft.ore} ore, {timeLeft.minute} minute, {timeLeft.secunde} secunde
             </p>
         </div>

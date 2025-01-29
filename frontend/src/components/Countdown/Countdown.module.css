@@ -1,0 +1,14 @@
+.countdownContainer {
+    text-align: center;
+  }
+  
+  .timerTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timerDisplay {
+    font-size: 1.25rem;
+  }
+  

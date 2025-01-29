@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./Form.module.css"
 
 const Form = () => {
     const [formData, setFormData] = useState({
@@ -51,9 +52,10 @@ const Form = () => {
     };
 
     return (
+        <div id="form" classNAme={styles.formContainer}>
         <form onSubmit={handleSubmit}>
             <h2>Confirmați Prezența</h2>
-            <label>
+            <label className={styles.formLabel }>
                 Nume complet:
                 <input
                     type="text"
@@ -61,9 +63,10 @@ const Form = () => {
                     value={formData.fullName}
                     onChange={handleInputChange}
                     required
+                    className={styles.formInput}
                 />
             </label>
-            <label>
+            <label className={styles.formLabel }>
                 Număr de telefon:
                 <input
                     type="tel"
@@ -71,9 +74,10 @@ const Form = () => {
                     value={formData.phoneNumber}
                     onChange={handleInputChange}
                     required
+                    className={styles.formInput}
                 />
             </label>
-            <label>
+            <label className={styles.formLabel }>
                 Număr persoane:
                 <input
                     type="number"
@@ -82,20 +86,22 @@ const Form = () => {
                     onChange={handleNumberOfGuestsChange}
                     min="1"
                     required
+                    className={styles.formInput}
                 />
             </label>
             {formData.guestNames.map((_, index) => (
-                <label key={index}>
+                <label key={index} className={styles.formLabel }>
                     Nume Invitat {index + 1}:
                     <input
                         type="text"
                         value={formData.guestNames[index]}
                         onChange={(e) => handleGuestNamesChange(index, e.target.value)}
                         required
+                        className={styles.formInput}
                     />
                 </label>
             ))}
-            <label>
+            <label className={styles.formLabel }>
                 Număr copii (cu meniu special):
                 <input
                     type="number"
@@ -103,14 +109,16 @@ const Form = () => {
                     value={formData.numberOfChildren}
                     onChange={handleInputChange}
                     min="0"
+                    className={styles.formInput}
                 />
             </label>
-            <label>
+            <label className={styles.formLabel }>
                 Preferințe culinare:
                 <select
                     name="foodPreference"
                     value={formData.foodPreference}
                     onChange={handleInputChange}
+                    className={styles.formSelect}
                 >
                     <option value="standard">Standard</option>
                     <option value="vegetarian">Vegetarian</option>
@@ -118,35 +126,38 @@ const Form = () => {
                 </select>
             </label>
             {formData.foodPreference === "other" && (
-                <label>
+                <label className={styles.formLabel }>
                     Alte preferințe:
                     <input
                         type="text"
                         name="otherPreferences"
                         value={formData.otherPreferences}
                         onChange={handleInputChange}
+                        className={styles.formInput}
                     />
                 </label>
             )}
-            <label>
+            <label className={styles.formLabel }>
                 Comentarii:
                 <textarea
                     name="comments"
                     value={formData.comments}
                     onChange={handleInputChange}
+                    className={styles.formTextarea}
                 />
             </label>
-            <label>
+            <label className={styles.formLabel }>
                 Doriți cazare?
                 <input
                     type="checkbox"
                     name="accommodation"
                     checked={formData.accommodation}
                     onChange={handleInputChange}
+                    className={styles.formInput}
                 />
             </label>
-            <button type="submit">Trimite</button>
-        </form>
+            <button type="submit" className={styles.submitButton}>Trimite</button>
+        </form></div>
     );
 };
 
