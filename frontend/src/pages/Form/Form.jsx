@@ -29,11 +29,24 @@ const Form = () => {
     };
 
     const handleNumberOfGuestsChange = (e) => {
-        const numberOfGuests = parseInt(e.target.value, 10);
+        const value = e.target.value;
+        
+        if (value === "") {
+            setFormData((prevData) => ({
+                ...prevData,
+                numberOfGuests: "",
+            }));
+            return;
+        }
+    
+        const numberOfGuests = Math.max(1, parseInt(value, 10) || 1);
+    
         setFormData((prevData) => ({
             ...prevData,
             numberOfGuests,
-            guestNames: Array(numberOfGuests).fill(""),
+            guestNames: prevData.guestNames.slice(0, numberOfGuests).concat(
+                Array(Math.max(0, numberOfGuests - prevData.guestNames.length)).fill("")
+            ),
         }));
     };
 
@@ -146,16 +159,18 @@ const Form = () => {
                     className={styles.formTextarea}
                 />
             </label>
-            <label className={styles.formLabel }>
-                Doriți cazare?
-                <input
-                    type="checkbox"
-                    name="accommodation"
-                    checked={formData.accommodation}
-                    onChange={handleInputChange}
-                    className={styles.formInput}
-                />
-            </label>
+            <label className={styles.checkboxContainer}>
+  <input
+    type="checkbox"
+    name="accommodation"
+    checked={formData.accommodation}
+    onChange={handleInputChange}
+    className={styles.formCheckbox}
+  />
+  <span className={styles.checkboxCustom}></span>
+  Doriți cazare?
+</label>
+
             <button type="submit" className={styles.submitButton}>Trimite</button>
         </form></div>
     );

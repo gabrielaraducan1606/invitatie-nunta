@@ -72,6 +72,13 @@ const Sidebar = () => {
             Întrebări Frecvente
           </a>
         </nav>
+
+        <div className={styles.footerSidebar}>
+          <hr className={styles.decorativeLine} />
+          <p className={styles.footerText}>Gabriela & Silviu</p>
+          <p className={styles.footerDate}>17 Mai 2025</p>
+        </div>
+        
       </div>
     </div>
   );

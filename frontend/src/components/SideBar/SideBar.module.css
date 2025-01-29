@@ -67,6 +67,30 @@ color: #E9967A;
     left:110px;
   }
   
+  .footerSidebar {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .decorativeLine {
+    width: 50%;
+    margin: 10px auto;
+    border: 1px solid #E9967A;
+  }
+  
+  .footerText {
+    font-family: "Dancing Script", serif;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .footerDate {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    color: #E9967A;
+  }
 
   @media screen and (max-width: 767.98px) {
     .hamburgerButton {

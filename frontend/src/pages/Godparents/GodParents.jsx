@@ -3,7 +3,7 @@ import GodparentsPhoto from '../../images/godParents.JPG';
 
 const GodParents = () => {
     return (
-      <div id="about-us" className={styles.pageContainer}>
+      <div id="godparents" className={styles.pageContainer}>
       <div className={styles.card}>
       <img src={GodparentsPhoto} alt="Nasi" className={styles.photo}/>
       <h4 className={styles.subtitle}>Nașii</h4>

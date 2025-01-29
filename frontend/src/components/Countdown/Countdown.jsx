@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Countdown.module.css"
+import styles from "./Countdown.module.css";
 
 function Countdown() {
     const calculateTimeLeft = () => {
@@ -29,11 +29,29 @@ function Countdown() {
     }, []);
 
     return (
-        <div className={styles.countdownContainer }>
-            <h2 classNAme={styles.timerTitle}>Începe în:</h2>
-            <p classNAme={styles.timerDisplay}>
-                {timeLeft.zile} zile, {timeLeft.ore} ore, {timeLeft.minute} minute, {timeLeft.secunde} secunde
-            </p>
+        <div id="countdown" className={styles.pageContainer}>
+            <div className={styles.backgroundBlur}></div>
+            <div className={styles.content}>
+                <h2 className={styles.countdownTitle}>Mai sunt</h2>
+                <div className={styles.countdownTimer}>
+                    <div className={styles.timeBox}>
+                        <span className={styles.timeNumber}>{timeLeft.zile}</span>
+                        <span className={styles.timeLabel}>Zile</span>
+                    </div>
+                    <div className={styles.timeBox}>
+                        <span className={styles.timeNumber}>{timeLeft.ore}</span>
+                        <span className={styles.timeLabel}>Ore</span>
+                    </div>
+                    <div className={styles.timeBox}>
+                        <span className={styles.timeNumber}>{timeLeft.minute}</span>
+                        <span className={styles.timeLabel}>Minute</span>
+                    </div>
+                    <div className={styles.timeBox}>
+                        <span className={styles.timeNumber}>{timeLeft.secunde}</span>
+                        <span className={styles.timeLabel}>Secunde</span>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

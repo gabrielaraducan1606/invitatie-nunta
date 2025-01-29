@@ -20,8 +20,8 @@ const App = () => {
         <AboutUs />
         <Godparents />
         <Parents />
-        <WhereWhen />
         <Countdown />
+        <WhereWhen />
         <RSVP />
         <FAQ />
       </div>
