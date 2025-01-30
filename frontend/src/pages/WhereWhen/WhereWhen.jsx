@@ -1,5 +1,5 @@
 import styles from "./WhereWhen.module.css";
-import { Church, PartyPopper } from "lucide-react"; // Import iconițe
+import { Church, PartyPopper, MapPin } from "lucide-react"; // Import iconițe
 
 const WhereWhen = () => {
   return (
@@ -17,6 +17,14 @@ const WhereWhen = () => {
             📍 Catedrala Sfântul Sava, Buzău <br />
             🕰 Ora: 17:00
           </p>
+          <a 
+            href="https://maps.app.goo.gl/WUrdxXxDRnUrPSSb7" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.mapButton}
+          >
+            <MapPin size={18} /> Vezi pe Google Maps
+          </a>
         </div>
 
         {/* Cardul pentru petrecerea de nuntă */}
@@ -27,6 +35,14 @@ const WhereWhen = () => {
             📍 Restaurant Glamour Imperial, Buzău <br />
             🕰 Ora: 19:00
           </p>
+          <a 
+            href="https://maps.app.goo.gl/oPjKQSCFic4oHvKV7" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.mapButton}
+          >
+            <MapPin size={18} /> Vezi pe Google Maps
+          </a>
         </div>
       </div>
     </div>

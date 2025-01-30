@@ -62,6 +62,9 @@ const Sidebar = () => {
           <a href="#parents" className={styles.navItem} onClick={handleLinkClick}>
             Părinții
           </a>
+          <a href="#countdown" className={styles.navItem} onClick={handleLinkClick}>
+            Cât mai este
+          </a>
           <a href="#wherewhen" className={styles.navItem} onClick={handleLinkClick}>
             Unde și Când
           </a>

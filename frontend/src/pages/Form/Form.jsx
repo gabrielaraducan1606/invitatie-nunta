@@ -65,7 +65,7 @@ const Form = () => {
     };
 
     return (
-        <div id="form" classNAme={styles.formContainer}>
+        <div id="form" className={styles.formContainer}>
         <form onSubmit={handleSubmit}>
             <h2>Confirmați Prezența</h2>
             <label className={styles.formLabel }>

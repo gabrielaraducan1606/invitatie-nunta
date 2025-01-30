@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
-
 .pageContainer {
   text-align: center;
   padding: 50px 20px;
@@ -9,13 +8,14 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background: linear-gradient(180deg, #5D4037 0%, #2F3E46 100%);}
+  background: linear-gradient(180deg, #5D4037 0%, #2F3E46 100%);
+}
 
 .pageTitle {
   font-size: 3rem;
   font-family: "Dancing Script", serif;
   margin-bottom: 10px;
-  color:  #E9967A; /* Galben auriu */
+  color: #E9967A; /* Auriu elegant */
 }
 
 .subtitle {
@@ -48,7 +48,7 @@
 }
 
 .icon {
-  color:  #E9967A; /* Auriu elegant */
+  color: #E9967A;
   margin-bottom: 10px;
 }
 
@@ -61,6 +61,27 @@
 .eventDetails {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+/* Stilizare buton Google Maps */
+.mapButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: #E9967A;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.mapButton:hover {
+  background: #d87c5f;
 }
 
 @media (max-width: 768px) {
